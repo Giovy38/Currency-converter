@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body .theme-light {
+  opacity: 0%;
+}
+body .theme-dark {
+  opacity: 100%;
+}
+
+.navbar {
+  background-color: #c05c04;
+}
+.navbar img {
+  height: 50px;
+  margin-left: 15px;
+  padding: 0.2rem;
+}
+.navbar #black-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.navbar #theme-moon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  color: #fff;
+}
+.navbar #theme-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  padding: 0.5rem;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

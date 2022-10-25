@@ -1,0 +1,37 @@
+.navbar{
+    background-color: #c05c04 ;
+    
+
+    img{
+        height: 50px;
+        margin-left: 15px;
+        padding: 0.2rem;
+    }
+
+    #black-logo{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #theme-moon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.5rem;
+        color: #fff;
+    }
+
+    #theme-button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 30px;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    
+
+
+
+}
