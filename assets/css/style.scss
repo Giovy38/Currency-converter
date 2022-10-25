@@ -5,11 +5,20 @@
 }
 
 body{
+    // hidden icon 
     .theme-light{
         opacity: 0%;
     }
     .theme-dark{
         opacity: 100%;
+    }
+
+    // bg color theme
+    .bg-dark{
+        background-color: #111110 ;
+    }
+    .bg-light{
+        background-color: #c05c04 ;
     }
 }
 

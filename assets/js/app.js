@@ -1,4 +1,4 @@
-// navbar
+// navbar theme change
 
 document.getElementById('theme-moon').addEventListener('click', onClick);
 document.getElementById('theme-sun').addEventListener('click', onClick);
@@ -6,8 +6,13 @@ document.getElementById('theme-sun').addEventListener('click', onClick);
 function onClick(e){
    const darkTheme = document.getElementsByClassName('theme-dark');
    const lightTheme = document.getElementsByClassName('theme-light');
+   const bgThemeDark = document.getElementsByClassName('bg-dark');
+   const bgThemeLight = document.getElementsByClassName('bg-light');
+
    const darkArray = Array.from(darkTheme);
    const lightArray = Array.from(lightTheme);
+   const bgArrayDark = Array.from(bgThemeDark);
+   const bgArrayLight = Array.from(bgThemeLight);
 
    darkArray.forEach(element => {
     element.classList.add('theme-light');
@@ -18,4 +23,15 @@ function onClick(e){
     element.classList.add('theme-dark');
     element.classList.remove('theme-light');
    });
+
+   bgArrayDark.forEach(element => {
+    element.classList.add('bg-light');
+    element.classList.remove('bg-dark');
+   });
+
+   bgArrayLight.forEach(element => {
+    element.classList.add('bg-dark');
+    element.classList.remove('bg-light');
+   });
 }
+

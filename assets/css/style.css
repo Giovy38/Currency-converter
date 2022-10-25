@@ -10,28 +10,31 @@ body .theme-light {
 body .theme-dark {
   opacity: 100%;
 }
-
-.navbar {
+body .bg-dark {
+  background-color: #111110;
+}
+body .bg-light {
   background-color: #c05c04;
 }
-.navbar img {
+
+.navbar-section img {
   height: 50px;
   margin-left: 15px;
   padding: 0.2rem;
 }
-.navbar #black-logo {
+.navbar-section #black-logo {
   position: absolute;
   top: 0;
   left: 0;
 }
-.navbar #theme-moon {
+.navbar-section #theme-moon {
   position: absolute;
   top: 0;
   right: 0;
   padding: 0.5rem;
   color: #fff;
 }
-.navbar #theme-button {
+.navbar-section #theme-button {
   position: absolute;
   top: 0;
   right: 0;
