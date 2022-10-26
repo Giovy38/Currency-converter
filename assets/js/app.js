@@ -147,7 +147,7 @@ function valueChange(){
       .then(resp => resp.json())
       .then((data) => {
          
-         document.getElementById('right-input').value = `${data.rates.USD}`;
+         document.getElementById('right-input').value = `${data.rates[rightMooney]}`;
          
       // alert(`${leftMooneyValue} ${leftMooney} = ${data.rates.USD} ${rightStartValue}`);
    });
