@@ -7,6 +7,9 @@ document.getElementById('theme-sun').addEventListener('click', onClick);
 const shadow = document.getElementsByClassName('shadow');
 const shadowArray = Array.from(shadow);
 let shadowOn = true;
+// select hidden obj
+const hiddenObj = document.getElementsByClassName('hidden');
+const hiddenObjArray = Array.from(hiddenObj);
 
 function onClick(e){
    const darkTheme = document.getElementsByClassName('theme-dark');
@@ -40,28 +43,38 @@ function onClick(e){
     element.classList.remove('bg-light');
    });
 
+
+
    if(shadowOn){
       shadowArray.forEach(element => {
          element.classList.remove('shadow');
         });
       document.body.style.backgroundColor = "#fff";
-        shadowOn = false;
+
+      hiddenObjArray.forEach(element => {
+         element.classList.remove('dark-hover');
+         element.classList.add('light-hover');
+
+      shadowOn = false;
+      })
 
    } else {
       shadowArray.forEach(element => {
          element.classList.add('shadow');
         });
         document.body.style.backgroundColor = "#111110";
-        shadowOn = true;
+
+      hiddenObjArray.forEach(element => {
+         element.classList.remove('light-hover');
+         element.classList.add('dark-hover');
+
+      shadowOn = true;
+      })
    }
 }
 
 // hidden value 
 let hidden = true;
-
-const hiddenObj = document.getElementsByClassName('hidden');
-
-const hiddenObjArray = Array.from(hiddenObj);
 
 hiddenObjArray.forEach(element => {
    element.style.opacity = "0";

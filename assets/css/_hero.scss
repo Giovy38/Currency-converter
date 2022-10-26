@@ -50,9 +50,19 @@
                 margin-top: 10px;
                 margin-bottom: 10px;
                 &:hover{
-                    background-color: $bg-dark-hover;
                     cursor: pointer;
+                }
+            }
 
+            .dark-hover{
+                &:hover{
+                    background-color: $bg-dark-hover;
+                }
+            }
+
+            .light-hover{
+                &:hover{
+                    background-color: $bg-light-hover;
                 }
             }
 
@@ -63,10 +73,7 @@
                 p{
                     width: 70px;
                 }
-
-                &:hover{
-                    background-color: $bg-dark-hover;
-                }
             }
+
         }
 }

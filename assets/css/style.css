@@ -78,8 +78,13 @@
   margin-bottom: 10px;
 }
 #hero-section .hero-container .hidden:hover {
-  background-color: #031730;
   cursor: pointer;
+}
+#hero-section .hero-container .dark-hover:hover {
+  background-color: #031730;
+}
+#hero-section .hero-container .light-hover:hover {
+  background-color: #e99f6f;
 }
 #hero-section .hero-container #first-right-value,
 #hero-section .hero-container #first-left-value {
@@ -88,10 +93,6 @@
 #hero-section .hero-container #first-right-value p,
 #hero-section .hero-container #first-left-value p {
   width: 70px;
-}
-#hero-section .hero-container #first-right-value:hover,
-#hero-section .hero-container #first-left-value:hover {
-  background-color: #031730;
 }
 
 * {
