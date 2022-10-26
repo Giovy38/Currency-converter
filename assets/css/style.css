@@ -22,9 +22,6 @@
   padding: 0.5rem;
   cursor: pointer;
 }
-#navbar-section .shadow {
-  box-shadow: 0 4px 10px -2px #fff;
-}
 
 #hero-section {
   margin-top: 20px;
@@ -105,6 +102,9 @@
 body {
   background-color: #111110;
 }
+body .shadow {
+  box-shadow: 0 4px 10px -2px #fff;
+}
 body .theme-light {
   opacity: 0%;
 }
@@ -116,6 +116,6 @@ body .bg-dark {
   color: #fff;
 }
 body .bg-light {
-  background-color: #F7C9AA;
+  background-color: #d89751;
   color: #000000;
 }/*# sourceMappingURL=style.css.map */

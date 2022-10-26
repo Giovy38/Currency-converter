@@ -10,6 +10,10 @@
 }
 
 body{
+
+    .shadow{
+        box-shadow: 0 4px 10px -2px $light-shadow-color;
+    }
     background-color: $bg-body;
     // hidden icon 
     .theme-light{

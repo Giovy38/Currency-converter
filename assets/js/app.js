@@ -49,7 +49,7 @@ function themeChainge(e){
       shadowArray.forEach(element => {
          element.classList.remove('shadow');
         });
-      document.body.style.backgroundColor = "#fff";
+      document.body.style.backgroundColor = "#F5DCB2";
 
       hiddenObjArray.forEach(element => {
          element.classList.remove('dark-hover');
