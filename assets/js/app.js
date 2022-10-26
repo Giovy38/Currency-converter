@@ -1,13 +1,19 @@
 // navbar theme change
 
+// icon controll 
 document.getElementById('theme-moon').addEventListener('click', onClick);
 document.getElementById('theme-sun').addEventListener('click', onClick);
+//  shadow controll 
+const shadow = document.getElementsByClassName('shadow');
+const shadowArray = Array.from(shadow);
+let shadowOn = true;
 
 function onClick(e){
    const darkTheme = document.getElementsByClassName('theme-dark');
    const lightTheme = document.getElementsByClassName('theme-light');
    const bgThemeDark = document.getElementsByClassName('bg-dark');
    const bgThemeLight = document.getElementsByClassName('bg-light');
+   
 
    const darkArray = Array.from(darkTheme);
    const lightArray = Array.from(lightTheme);
@@ -33,5 +39,17 @@ function onClick(e){
     element.classList.add('bg-dark');
     element.classList.remove('bg-light');
    });
+
+   if(shadowOn){
+      shadowArray.forEach(element => {
+         element.classList.remove('shadow');
+        });
+        shadowOn = false;
+   } else {
+      shadowArray.forEach(element => {
+         element.classList.add('shadow');
+        });
+        shadowOn = true;
+   }
 }
 

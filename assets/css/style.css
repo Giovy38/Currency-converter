@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #111110;
+}
 body .theme-light {
   opacity: 0%;
 }
@@ -11,7 +14,7 @@ body .theme-dark {
   opacity: 100%;
 }
 body .bg-dark {
-  background-color: #111110;
+  background-color: #000000;
 }
 body .bg-light {
   background-color: #c05c04;
@@ -41,4 +44,8 @@ body .bg-light {
   font-size: 30px;
   padding: 0.5rem;
   cursor: pointer;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px -2px #fff;
 }/*# sourceMappingURL=style.css.map */
