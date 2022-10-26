@@ -1,8 +1,8 @@
 // navbar theme change
 
 // icon controll 
-document.getElementById('theme-moon').addEventListener('click', onClick);
-document.getElementById('theme-sun').addEventListener('click', onClick);
+document.getElementById('theme-moon').addEventListener('click', themeChainge);
+document.getElementById('theme-sun').addEventListener('click', themeChainge);
 //  shadow controll 
 const shadow = document.getElementsByClassName('shadow');
 const shadowArray = Array.from(shadow);
@@ -11,7 +11,7 @@ let shadowOn = true;
 const hiddenObj = document.getElementsByClassName('hidden');
 const hiddenObjArray = Array.from(hiddenObj);
 
-function onClick(e){
+function themeChainge(e){
    const darkTheme = document.getElementsByClassName('theme-dark');
    const lightTheme = document.getElementsByClassName('theme-light');
    const bgThemeDark = document.getElementsByClassName('bg-dark');
