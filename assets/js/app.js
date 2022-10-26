@@ -77,7 +77,7 @@ function themeChainge(e){
 let hidden = true;
 
 hiddenObjArray.forEach(element => {
-   element.style.opacity = "0";
+   element.style.display = "none";
 })
 
 // see the hidden object 
@@ -93,7 +93,7 @@ function showHidden(){
    console.log('ciao');
    if(hidden){
       hiddenObjArray.forEach(element => {
-         element.style.opacity = "100";
+         element.style.display = "flex";
 
          document.getElementById('first-left-value').style.borderRadius = "10px 10px 0 0";
          document.getElementById('first-right-value').style.borderRadius = "10px 10px 0 0";
@@ -103,7 +103,7 @@ function showHidden(){
       hidden = false;
    } else {
       hiddenObjArray.forEach(element => {
-         element.style.opacity = "0";
+         element.style.display = "none";
 
          document.getElementById('first-left-value').style.borderRadius = "10px";
          document.getElementById('first-right-value').style.borderRadius = "10px";
