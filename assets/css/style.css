@@ -61,9 +61,17 @@
   cursor: pointer;
   font-size: 30px;
 }
-#hero-section .hero-container .value-container .hidden {
-  border-radius: none;
-  display: none;
+#hero-section .hero-container .value-container .value-input {
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+}
+#hero-section .hero-container .container {
+  border-radius: 10px;
 }
 #hero-section .hero-container #first-right-value,
 #hero-section .hero-container #first-left-value {
@@ -86,10 +94,10 @@ body .theme-dark {
   opacity: 100%;
 }
 body .bg-dark {
-  background-color: #000000;
+  background-color: #272727;
   color: #fff;
 }
 body .bg-light {
-  background-color: rgba(204, 198, 198, 0.8901960784);
+  background-color: #F7C9AA;
   color: #000000;
 }/*# sourceMappingURL=style.css.map */
