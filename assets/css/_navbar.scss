@@ -1,36 +1,39 @@
-.navbar-section{
+@import './color';
 
+#navbar-section{
 
-    img{
-        height: 50px;
-        margin-left: 15px;
-        padding: 0.2rem;
+    .navbar-container{
+
+        img{
+            height: 50px;
+            margin-left: 15px;
+            padding: 0.2rem;
+        }
+
+        #black-logo{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #theme-moon{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0.5rem;
+        }
+
+        #theme-button{
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 30px;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
     }
 
-    #black-logo{
-        position: absolute;
-        top: 0;
-        left: 0;
+    .shadow{
+        box-shadow: 0 4px 10px -2px $light-shadow-color;
     }
-
-    #theme-moon{
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0.5rem;
-        color: #fff;
-    }
-
-    #theme-button{
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 30px;
-        padding: 0.5rem;
-        cursor: pointer;
-    }
-}
-
-.shadow{
-    box-shadow: 0 4px 10px -2px #fff;
 }

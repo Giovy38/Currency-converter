@@ -1,3 +1,8 @@
+@import './navbar';
+@import './hero';
+@import './utilies';
+@import './color';
+
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +10,7 @@
 }
 
 body{
-    background-color: #111110;
+    background-color: $bg-body;
     // hidden icon 
     .theme-light{
         opacity: 0%;
@@ -16,11 +21,12 @@ body{
 
     // bg color theme
     .bg-dark{
-        background-color: #000000 ;
+        background-color: $bg-dark ;
+        color: $text-light-color;
     }
     .bg-light{
-        background-color: #c05c04 ;
+        background-color: $bg-light ;
+        color: $text-dark-color;
     }
 }
 
-@import './navbar';

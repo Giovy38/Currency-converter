@@ -1,3 +1,75 @@
+#navbar-section .navbar-container img {
+  height: 50px;
+  margin-left: 15px;
+  padding: 0.2rem;
+}
+#navbar-section .navbar-container #black-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#navbar-section .navbar-container #theme-moon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+}
+#navbar-section .navbar-container #theme-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+#navbar-section .shadow {
+  box-shadow: 0 4px 10px -2px #fff;
+}
+
+#hero-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#hero-section #value-title {
+  background: none;
+  font-family: "Roboto Mono", monospace;
+}
+#hero-section .hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10rem;
+}
+#hero-section .hero-container .value-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  padding: 10px;
+  gap: 2rem;
+}
+#hero-section .hero-container .value-container img {
+  width: 50px;
+  height: 32px;
+  border-radius: 5px;
+}
+#hero-section .hero-container .value-container .down-arrow-icon {
+  cursor: pointer;
+  font-size: 30px;
+}
+#hero-section .hero-container .value-container .hidden {
+  border-radius: none;
+  display: none;
+}
+#hero-section .hero-container #first-right-value,
+#hero-section .hero-container #first-left-value {
+  border-radius: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,37 +87,9 @@ body .theme-dark {
 }
 body .bg-dark {
   background-color: #000000;
-}
-body .bg-light {
-  background-color: #c05c04;
-}
-
-.navbar-section img {
-  height: 50px;
-  margin-left: 15px;
-  padding: 0.2rem;
-}
-.navbar-section #black-logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.navbar-section #theme-moon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.5rem;
   color: #fff;
 }
-.navbar-section #theme-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 30px;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-.shadow {
-  box-shadow: 0 4px 10px -2px #fff;
+body .bg-light {
+  background-color: rgba(204, 198, 198, 0.8901960784);
+  color: #000000;
 }/*# sourceMappingURL=style.css.map */

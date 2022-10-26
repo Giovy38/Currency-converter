@@ -44,12 +44,17 @@ function onClick(e){
       shadowArray.forEach(element => {
          element.classList.remove('shadow');
         });
+      document.body.style.backgroundColor = "#fff";
         shadowOn = false;
+
    } else {
       shadowArray.forEach(element => {
          element.classList.add('shadow');
         });
+        document.body.style.backgroundColor = "#111110";
         shadowOn = true;
    }
+
+
 }
 
