@@ -20,7 +20,6 @@
                 justify-content: flex-start;
                 padding: 10px;
                 gap: 2rem;
-                // border: 3px solid white;
                 img{
                     width: 50px;
                     height: 32px;
@@ -47,14 +46,27 @@
                 border-radius: 10px;
             }
 
+            .hidden{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                &:hover{
+                    background-color: $bg-dark-hover;
+                    cursor: pointer;
+
+                }
+            }
+
             #first-right-value,
             #first-left-value{
                 border-radius: 10px;
+
+                p{
+                    width: 70px;
+                }
+
+                &:hover{
+                    background-color: $bg-dark-hover;
+                }
             }
-
-          
         }
-
-    
-   
 }

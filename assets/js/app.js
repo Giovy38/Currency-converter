@@ -99,6 +99,43 @@ function showHidden(){
       })
       hidden = true;
    }
+}
 
-   
+// get API 
+
+const inputValueChange = document.querySelectorAll('.value-input');
+let leftMooneyValue, rightMooneyValue; 
+let leftMooney, rightMooney;
+
+
+inputValueChange.forEach(input => {
+   input.addEventListener('input', valueChange)
+})
+
+function valueChange(){
+
+   // taking the value of the input
+   leftMooneyValue = document.getElementById('left-input').value
+   rightMooneyValue = document.getElementById('right-input').value
+
+   // taking the extended name of the mooney value
+   leftStartValue = document.getElementById('left-start-value-extended').innerHTML;
+   rightStartValue = document.getElementById('right-start-value-extended').innerHTML;
+
+   // taking the short name of the mooney value
+   leftMooney = document.getElementById('left-start-value').innerHTML;
+   rightMooney = document.getElementById('right-start-value').innerHTML;
+
+
+   document.getElementById('value-title').innerHTML = `${leftMooneyValue} ${leftStartValue} to ${rightStartValue}`
+
+   const host = 'api.frankfurter.app';
+   fetch(`https://${host}/latest?amount=${leftMooneyValue}&from=${leftMooney}&to=${rightMooney}`)
+      .then(resp => resp.json())
+      .then((data) => {
+         
+         document.getElementById('right-input').value = `${data.rates.USD}`;
+         
+      // alert(`${leftMooneyValue} ${leftMooney} = ${data.rates.USD} ${rightStartValue}`);
+   });
 }

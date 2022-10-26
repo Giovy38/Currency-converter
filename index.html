@@ -36,11 +36,12 @@
     <h1 id="value-title" class="bg-dark">1 EUR to USD Dollar</h1>
     <div class="hero-container">
         
+        <!-- left value -->
         <div class="left-value">
             <div id="first-left-value" class="value-container bg-dark">
                 <img src="/assets/img/euro.png" alt="">
-                <h3>EUR</h3>
-                <p>Euro</p>
+                <h3 id="left-start-value">EUR</h3>
+                <p id="left-start-value-extended">Euro</p>
                 <i class='bx bx-chevron-down down-arrow-icon'></i>
             </div>
 
@@ -63,15 +64,16 @@
             </div>
 
             <div id="left-mooney-input" class="value-container bg-dark container">
-                <input type="text" class="value-input" value="1">
+                <input id="left-input" type="text" class="value-input" value="1">
             </div>
         </div>
-    
+
+    <!-- right value  -->
         <div class="right-value">
             <div id="first-right-value" class="value-container bg-dark">
                 <img src="/assets/img/usd.png" alt="">
-                <h3>USD</h3>
-                <p>US Dollar</p>
+                <h3 id="right-start-value">USD</h3>
+                <p id="right-start-value-extended">US Dollar</p>
                 <i class='bx bx-chevron-down down-arrow-icon'></i>
             </div>
 
@@ -97,7 +99,7 @@
             </div>
 
             <div id="right-mooney-input" class="value-container bg-dark container">
-                <input type="text" class="value-input" value="0.99118">
+                <input id="right-input" type="text" class="value-input" value="0.99118">
             </div>
         </div>
     </div>

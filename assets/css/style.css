@@ -73,9 +73,25 @@
 #hero-section .hero-container .container {
   border-radius: 10px;
 }
+#hero-section .hero-container .hidden {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#hero-section .hero-container .hidden:hover {
+  background-color: #031730;
+  cursor: pointer;
+}
 #hero-section .hero-container #first-right-value,
 #hero-section .hero-container #first-left-value {
   border-radius: 10px;
+}
+#hero-section .hero-container #first-right-value p,
+#hero-section .hero-container #first-left-value p {
+  width: 70px;
+}
+#hero-section .hero-container #first-right-value:hover,
+#hero-section .hero-container #first-left-value:hover {
+  background-color: #031730;
 }
 
 * {
@@ -94,7 +110,7 @@ body .theme-dark {
   opacity: 100%;
 }
 body .bg-dark {
-  background-color: #272727;
+  background-color: #0a274b;
   color: #fff;
 }
 body .bg-light {
