@@ -156,16 +156,17 @@ function valueChange(){
    
 }
 
-// switch the selected value with the 1st value 
+// SWITCH the selected value with the 1st value 
 const leftValue = document.getElementById('left-value');
 const rightValue = document.getElementById('right-value');
 
 
 
-leftValue.addEventListener('click', switchValue );
+leftValue.addEventListener('click', switchValueL );
+rightValue.addEventListener('click', switchValueR );
 
 
-function switchValue(e){
+function switchValueL(e){
 
    if(e.target.classList.contains('left-money-container') || e.target.parentElement.classList.contains('left-money-container') ){
       const leftValueNod = document.querySelectorAll('#left-value');
@@ -195,6 +196,43 @@ function switchValue(e){
       firstLeftChoice.children[1].innerHTML = `${selectedChoice.children[1].innerHTML}`;
       // CHANGE long value
       firstLeftChoice.children[2].innerHTML = `${selectedChoice.children[2].innerHTML}`;
+   }
+   
+   valueChange();
+}
+
+// SWITCH right part 
+
+function switchValueR(e){
+
+   if(e.target.classList.contains('right-money-container') || e.target.parentElement.classList.contains('right-money-container') ){
+      const rightValueNod = document.querySelectorAll('#right-value');
+      let selectedTarget;
+
+      if(e.target.classList.contains('right-money-container')){
+         // if i click on div
+         selectedTarget = e.target;
+      } else {
+         // if i click on a div's element
+         selectedTarget = e.target.parentElement;
+      }
+
+      let firstRightChoice = rightValueNod[0].children[0];
+      let selectedChoice = selectedTarget;
+
+
+       // GET img src
+       let selectedChoiceImgUrl = selectedChoice.children[0].getAttribute('src');
+      
+
+      // PUT the current value to the selected value position
+     
+      // CHANGE img
+      firstRightChoice.children[0].src = `${selectedChoiceImgUrl}`;
+      // CHANGE short value
+      firstRightChoice.children[1].innerHTML = `${selectedChoice.children[1].innerHTML}`;
+      // CHANGE long value
+      firstRightChoice.children[2].innerHTML = `${selectedChoice.children[2].innerHTML}`;
    }
    
    valueChange();
