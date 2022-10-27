@@ -142,13 +142,18 @@ function valueChange(){
    document.getElementById('value-title').innerHTML = `${leftMooneyValue} ${leftStartValue} to ${rightStartValue}`
 
    const host = 'api.frankfurter.app';
-   fetch(`https://${host}/latest?amount=${leftMooneyValue}&from=${leftMooney}&to=${rightMooney}`)
+   if(leftMooney !== rightMooney ){
+      fetch(`https://${host}/latest?amount=${leftMooneyValue}&from=${leftMooney}&to=${rightMooney}`)
       .then(resp => resp.json())
       .then((data) => {
          
          document.getElementById('right-input').value = `${data.rates[rightMooney]}`;
          
-   });
+      });
+   } else {
+      document.getElementById('right-input').value = `${leftMooneyValue}`;
+   }
+   
 }
 
 // switch the selected value with the 1st value 
@@ -157,7 +162,8 @@ const rightValue = document.getElementById('right-value');
 
 
 
-leftValue.addEventListener('click', switchValue);
+leftValue.addEventListener('click', switchValue );
+
 
 function switchValue(e){
 
@@ -174,39 +180,22 @@ function switchValue(e){
       }
 
       let firstLeftChoice = leftValueNod[0].children[0];
-      let transitionChoice;
       let selectedChoice = selectedTarget;
 
-      transitionChoice = firstLeftChoice;
-      firstLeftChoice = selectedChoice;
-      selectedChoice = transitionChoice;
 
-       // get img src
-       let firstLeftChoiceImgUrl = firstLeftChoice.children[0].getAttribute('src');
+       // GET img src
        let selectedChoiceImgUrl = selectedChoice.children[0].getAttribute('src');
-
-      // PUT the selected value position to the 1st choice
-
-      // change img
-      selectedChoice.children[0].src = `${firstLeftChoiceImgUrl}`;
-      // change short value
-      selectedChoice.children[1].innerHTML = `${firstLeftChoice.children[1].innerHTML}`;
-      // change long value
-      selectedChoice.children[2].innerHTML = `${firstLeftChoice.children[2].innerHTML}`;
-      console.log('selectedchoice ', firstLeftChoice.children[1])
       
 
       // PUT the current value to the selected value position
      
-      // change img
+      // CHANGE img
       firstLeftChoice.children[0].src = `${selectedChoiceImgUrl}`;
-      // change short value
+      // CHANGE short value
       firstLeftChoice.children[1].innerHTML = `${selectedChoice.children[1].innerHTML}`;
-      // change long value
+      // CHANGE long value
       firstLeftChoice.children[2].innerHTML = `${selectedChoice.children[2].innerHTML}`;
-
-      
-      
    }
    
+   valueChange();
 }
