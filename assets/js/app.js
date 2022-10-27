@@ -90,7 +90,6 @@ downArrowIcon.forEach(arrow => {
 })
 
 function showHidden(){
-   console.log('ciao');
    if(hidden){
       hiddenObjArray.forEach(element => {
          element.style.display = "flex";
@@ -149,6 +148,65 @@ function valueChange(){
          
          document.getElementById('right-input').value = `${data.rates[rightMooney]}`;
          
-      // alert(`${leftMooneyValue} ${leftMooney} = ${data.rates.USD} ${rightStartValue}`);
    });
+}
+
+// switch the selected value with the 1st value 
+const leftValue = document.getElementById('left-value');
+const rightValue = document.getElementById('right-value');
+
+
+
+leftValue.addEventListener('click', switchValue);
+
+function switchValue(e){
+
+   if(e.target.classList.contains('left-money-container') || e.target.parentElement.classList.contains('left-money-container') ){
+      const leftValueNod = document.querySelectorAll('#left-value');
+      let selectedTarget;
+
+      if(e.target.classList.contains('left-money-container')){
+         // if i click on div
+         selectedTarget = e.target;
+      } else {
+         // if i click on a div's element
+         selectedTarget = e.target.parentElement;
+      }
+
+      let firstLeftChoice = leftValueNod[0].children[0];
+      let transitionChoice;
+      let selectedChoice = selectedTarget;
+
+      transitionChoice = firstLeftChoice;
+      firstLeftChoice = selectedChoice;
+      selectedChoice = transitionChoice;
+
+       // get img src
+       let firstLeftChoiceImgUrl = firstLeftChoice.children[0].getAttribute('src');
+       let selectedChoiceImgUrl = selectedChoice.children[0].getAttribute('src');
+
+      // PUT the selected value position to the 1st choice
+
+      // change img
+      selectedChoice.children[0].src = `${firstLeftChoiceImgUrl}`;
+      // change short value
+      selectedChoice.children[1].innerHTML = `${firstLeftChoice.children[1].innerHTML}`;
+      // change long value
+      selectedChoice.children[2].innerHTML = `${firstLeftChoice.children[2].innerHTML}`;
+      console.log('selectedchoice ', firstLeftChoice.children[1])
+      
+
+      // PUT the current value to the selected value position
+     
+      // change img
+      firstLeftChoice.children[0].src = `${selectedChoiceImgUrl}`;
+      // change short value
+      firstLeftChoice.children[1].innerHTML = `${selectedChoice.children[1].innerHTML}`;
+      // change long value
+      firstLeftChoice.children[2].innerHTML = `${selectedChoice.children[2].innerHTML}`;
+
+      
+      
+   }
+   
 }
