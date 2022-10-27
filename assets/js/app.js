@@ -149,7 +149,8 @@ function valueChange(){
          
          document.getElementById('right-input').value = `${data.rates[rightMooney]}`;
          
-      });
+      })
+      .catch(error => console.log(error));
    } else {
       document.getElementById('right-input').value = `${leftMooneyValue}`;
    }
