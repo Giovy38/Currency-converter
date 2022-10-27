@@ -132,7 +132,7 @@ function valueChange(){
 
    // taking the extended name of the mooney value
    leftStartValue = document.getElementById('left-start-value-extended').innerHTML;
-   rightStartValue = document.getElementById('right-start-value-extended').innerHTML;
+   const rightStartValue = document.getElementById('right-start-value-extended').innerHTML;
 
    // taking the short name of the mooney value
    leftMooney = document.getElementById('left-start-value').innerHTML;
