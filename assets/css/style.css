@@ -79,6 +79,9 @@
   padding: 10px;
   border: none;
 }
+#hero-section .hero-container .value-container .value-input:hover {
+  opacity: 80%;
+}
 #hero-section .hero-container .container {
   border-radius: 10px;
 }
@@ -103,6 +106,10 @@
 #hero-section .hero-container #first-left-value p {
   width: 70px;
   text-align: center;
+}
+#hero-section .hero-container #first-right-value:hover,
+#hero-section .hero-container #first-left-value:hover {
+  opacity: 70%;
 }
 @media screen and (max-width: 843px) {
   #hero-section .hero-container #right-value {

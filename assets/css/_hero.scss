@@ -47,6 +47,11 @@
                     font-weight: bold;
                     padding: 10px;
                     border: none;
+
+                    &:hover{
+                        opacity: 80%;
+                    }
+
                 }
             }
 
@@ -81,6 +86,10 @@
                 p{
                     width: 70px;
                     text-align: center;
+                }
+
+                &:hover{
+                    opacity: 70%;
                 }
             }
 
