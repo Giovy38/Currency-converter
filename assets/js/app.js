@@ -279,8 +279,7 @@ function invertValue(){
          rightValueArray[index].innerHTML = transitorElement.children[index].innerHTML;
       }
 
-   valueChange();
-
+      valueChange();
 
 }
 
