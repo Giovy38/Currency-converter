@@ -9,6 +9,7 @@
         #value-title{
             background: none;
             font-family: 'Roboto Mono', monospace;
+            text-align: center
         }
 
         .hero-container{
@@ -79,6 +80,7 @@
 
                 p{
                     width: 70px;
+                    text-align: center;
                 }
             }
 
@@ -89,5 +91,59 @@
                 }
             }
 
+
+            .switch-section{
+                @include tablet{
+                width: 100%;
+                }
+
+                @include flexCenter;
+                .switch-button{
+                    padding: 10px;
+                    border-radius: 5px;
+                    width: 47px;
+                    height: 42px;
+                    display: flex;
+                    flex-direction: column;
+                    cursor: pointer;
+                   
+
+                    &:hover{
+                        animation: bounceAndRotate 1s linear;
+                        box-shadow: none;
+                        @keyframes bounceAndRotate {
+                            0% {
+                              transform:rotate(0deg);top:-20px;
+                            }
+                            25% {
+                               transform:rotate(00deg);top:-10px;
+                            }
+                            50% {
+                               transform:rotate(0deg);top:0px;
+                            }
+                            75% {
+                               transform:rotate(180deg);top:10px;
+                            }
+                            100% {
+                              transform: rotate(180deg);top:20px;
+                            }
+                          }
+                    }
+                    
+    
+                    &-left-arrow{
+                        display: flex;
+                        justify-content: flex-start;
+                    }
+    
+                    &-right-arrow{
+                        display: flex;
+                        justify-content: flex-end;
+                        position: relative;
+                        bottom: 10px;
+                    }
+                }
+            }
+          
         }
 }

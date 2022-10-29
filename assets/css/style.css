@@ -37,6 +37,7 @@
 #hero-section #value-title {
   background: none;
   font-family: "Roboto Mono", monospace;
+  text-align: center;
 }
 #hero-section .hero-container {
   display: flex;
@@ -46,7 +47,7 @@
   margin-top: 30px;
   gap: 5rem;
 }
-@media screen and (max-width: 729px) {
+@media screen and (max-width: 843px) {
   #hero-section .hero-container {
     display: grid;
   }
@@ -101,11 +102,90 @@
 #hero-section .hero-container #first-right-value p,
 #hero-section .hero-container #first-left-value p {
   width: 70px;
+  text-align: center;
 }
-@media screen and (max-width: 729px) {
+@media screen and (max-width: 843px) {
   #hero-section .hero-container #right-value {
     margin-bottom: 2rem;
   }
+}
+#hero-section .hero-container .switch-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 843px) {
+  #hero-section .hero-container .switch-section {
+    width: 100%;
+  }
+}
+#hero-section .hero-container .switch-section .switch-button {
+  padding: 10px;
+  border-radius: 5px;
+  width: 47px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+#hero-section .hero-container .switch-section .switch-button:hover {
+  -webkit-animation: bounceAndRotate 1s linear;
+          animation: bounceAndRotate 1s linear;
+  box-shadow: none;
+}
+@-webkit-keyframes bounceAndRotate {
+  0% {
+    transform: rotate(0deg);
+    top: -20px;
+  }
+  25% {
+    transform: rotate(0deg);
+    top: -10px;
+  }
+  50% {
+    transform: rotate(0deg);
+    top: 0px;
+  }
+  75% {
+    transform: rotate(180deg);
+    top: 10px;
+  }
+  100% {
+    transform: rotate(180deg);
+    top: 20px;
+  }
+}
+@keyframes bounceAndRotate {
+  0% {
+    transform: rotate(0deg);
+    top: -20px;
+  }
+  25% {
+    transform: rotate(0deg);
+    top: -10px;
+  }
+  50% {
+    transform: rotate(0deg);
+    top: 0px;
+  }
+  75% {
+    transform: rotate(180deg);
+    top: 10px;
+  }
+  100% {
+    transform: rotate(180deg);
+    top: 20px;
+  }
+}
+#hero-section .hero-container .switch-section .switch-button-left-arrow {
+  display: flex;
+  justify-content: flex-start;
+}
+#hero-section .hero-container .switch-section .switch-button-right-arrow {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 10px;
 }
 
 * {

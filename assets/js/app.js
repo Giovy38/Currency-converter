@@ -238,3 +238,50 @@ function switchValueR(e){
    
    valueChange();
 }
+
+// -------------------------SWITCH BUTTON --------------------- 
+
+// SWITCH left value with right value 
+
+const buttonSwitch = document.getElementById('button-switch');
+
+buttonSwitch.addEventListener('click', invertValue);
+
+function invertValue(){
+   // one -> EUR
+   // two -> USD
+   // transitor value 
+
+   // transitor = one 
+   // one = two
+   // two = transitor 
+
+   const leftValueNod = document.querySelectorAll('#left-value');
+   const rightValueNod = document.querySelectorAll('#right-value');
+
+   let firstLeftChoice = leftValueNod[0].children[0];
+   let firstRightChoice = rightValueNod[0].children[0];
+
+   const transitorElement = document.createElement('div');
+   transitorElement.innerHTML = firstLeftChoice.innerHTML;
+
+      const rightValueArray = Array.from(firstRightChoice.children);
+      const leftValueArray = Array.from(firstLeftChoice.children);
+      
+
+
+      for (let index = 0; index < rightValueArray.length-1; index++) {
+         if(index === 0){
+            leftValueArray[index].src = rightValueArray[index].src;
+            rightValueArray[index].src = transitorElement.children[index].src
+         }
+         leftValueArray[index].innerHTML = rightValueArray[index].innerHTML;
+         rightValueArray[index].innerHTML = transitorElement.children[index].innerHTML;
+      }
+
+   valueChange();
+
+
+}
+
+
